@@ -4,7 +4,7 @@ let calculated = '1'
 
 // Only allowed to change below
 
-//changed variable, changed single quotes on string to double
+//fixed variable, changed single quotes on string to double
 const logCalc = () => { 
     const isString = typeof calculated === "numerical-string"; //changed equal to(=) to strictly equal to(===) which becomes false/falsy so the Ternary below resolves correctly 
     const calculatedAsNumber = isString ? calculated : parseInt(calculated);//changed to parseInt
@@ -43,3 +43,5 @@ calcUser();
 
 checkUser();
 calcUser();
+
+//this wasn't to complicated didn't struggle or look for other ways this could be resolved also time isn't on my side.
