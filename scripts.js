@@ -1,42 +1,45 @@
-let state = 'idle'
-let user = null
-let calculated = '1'
+let state = 'idle'   //is the state idle or not
+let user = null      //username
+let calculated = '1' 
 
 // Only allowed to change below
 
-
-const = logCalc () => { 
-    const isString = typeof calculated = 'numerical-string' 
-    const calculatedAsNumber = isString ? calculated : parseNumber(calculated)
-    calculated === calculatedAsNumber + 1 
+//changed variable, changed single quotes on string to double
+const logCalc = () => { 
+    const isString = typeof calculated === "numerical-string"; //changed equal to(=) to strictly equal to(===) which becomes false/falsy so the Ternary below resolves correctly 
+    const calculatedAsNumber = isString ? calculated : parseInt(calculated);//changed to parseInt
+    calculated = calculatedAsNumber + 1; //Changed strictly equal to(===) to equal to(=) because we are giving the variable calculated a new value
 }
 
-const = calcUser () => {
-  logCalc
-  if (calculated > 2) user = 'John'
-  if (calculated > 2) state = 'requesting'
-  if (calculated > 3) state = 'idle'
-}
+//added parentheses and semicolons and fixed variable 
+const calcUser = () => {
+  logCalc();             
+  if (calculated > 2) user = 'John';
+  if (calculated > 2) state = 'requesting';
+  if (calculated > 3) state = 'idle';
+};
 
-const = checkUser () => {
-	if (user && state === 'requesting') {
-		console.log(`User: ${user} (${calculated})`)
+//fixed variable and string from single quote to double quotes and added semicolon for the console to log
+const checkUser = () => {
+	if (user && state === "requesting") {
+		console.log(`User: ${user} (${calculated})`);
 	}
-}
+};
 
 // Only allowed to change code above
 
-checkUser()
-calcUser()
+//added semicolon to check function
+checkUser();
+calcUser();
 
-checkUser()
-calcUser()
+checkUser();
+calcUser();
 
-checkUser()
-calcUser()
+checkUser();
+calcUser();
 
-checkUser()
-calcUser()
+checkUser();
+calcUser();
 
-checkUser()
-calcUser()
+checkUser();
+calcUser();
